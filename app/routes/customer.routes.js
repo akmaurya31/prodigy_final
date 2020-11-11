@@ -2,9 +2,9 @@ module.exports = app => {
   const customers = require("../controllers/customer.controller.js");
  
     // By Ashish Ji 
-    app.post("/addBankDetail", customers.addBankDetail);
-    app.post("/bankDetails", customers.showDetails);   //customers ->contrller, showDetails->method
-    app.post("/productApi", customers.findAllProducts);
+    app.post("/addBankDetail", customers.addBankDetail);//add secondary bank
+    app.post("/bankDetails", customers.showDetails);   //customers ->contrller, showDetails->method// get banks details by emailid 
+    app.post("/productApi", customers.findAllProducts);//find all nse product
     app.post("/bankverify",customers.bankverify);
     app.post("/bankverify2",customers.bankverify2);
     app.get("/users/:emailId", customers.findOne1users);
